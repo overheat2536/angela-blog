@@ -71,9 +71,9 @@ class Comments(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     author = relationship("User", back_populates="comments")
 #
-# with app.app_context():
-#     db.create_all()
-#     print('created')
+with app.app_context():
+    db.create_all()
+    print('created')
 
 ## Create Form
 class RegisterForm(FlaskForm):
